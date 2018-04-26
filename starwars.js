@@ -38,5 +38,11 @@ $.ajax({
           $('.reading-animation').html(filme.title + "\n\n" + filme.opening_crawl);
         });
       }
+      let novoli = $(`<li style="color:#2d2d2d">Tragedy</li>`);
+      novoli.appendTo(elementoLista);
+      novoli.on('click', function(e) {
+        $('.reading-animation').html("Did you ever hear the tragedy\nof Darth Plagueis The Wise? \nI thought not.\nIt’s not a story the Jedi would tell you. \nIt’s a Sith legend.\nDarth Plagueis was a Dark Lord of the Sith,\nso powerful and so wise\nhe could use the Force to\n influence the midichlorians to create life…\n He had such a knowledge\nof the dark side that he\ncould even keep the ones\nhe cared about from dying.\n The dark side of the Force is\na pathway to many abilities\nsome consider to be unnatural.\n He became so powerful… the only thing\n he was afraid of was losing his power,\nwhich eventually, of course, he did.\nUnfortunately, he taught his apprentice\neverything he knew, then his apprentice\nkilled him in his sleep.\nIronic.\nHe could save others from death...\n\n\n\n but not himself.");
+      });
+
       elementoLista.append(elementoLista);
 }});
