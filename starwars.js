@@ -28,14 +28,14 @@ $.ajax({
       elementoLista.html('');
       for(filme of lista){
         let novoli = $(`<li data-episode_id="${filme.episode_id}" >${filme.episode_id}º Episódio</li>`);
-        //let novoli = elementoLista.append(`<li>${filme.episode_id}º Episódio</li>`);
+
         novoli.appendTo(elementoLista);
         novoli.on('click', function(e) {
           let episode_id=e.target.dataset.episode_id;
           let filme = lista.find(function(filme){
             return filme.episode_id == episode_id;
           });
-          $('.reading-animation').html("Episódio de Número " + filme.episode_id + ", Cronologicamente\n" + filme.opening_crawl);
+          $('.reading-animation').html(filme.title + "\n\n" + filme.opening_crawl);
         });
       }
       elementoLista.append(elementoLista);
